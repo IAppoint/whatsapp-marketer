@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Responsive</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .landing {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Capa oscura */
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background-color: #25D366; /* Color de WhatsApp */
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            border: none;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btn-whatsapp::before {
+            content: '\2764'; /* Código unicode para corazón */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btn-whatsapp:hover::before {
+            transform: translate(-50%, -50%) scale(10);
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="landing">
+        <img src="fondo.png" alt="Fondo" class="background">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Accede a la formación Whatsapp Marketer</h1>
+            <a href="https://chat.whatsapp.com/J4sP8kTp24O0d1fA7Y95bX" class="btn-whatsapp" target="_blank">Acceder</a>
+        </div>
+    </div>
+</body>
+</html>
